@@ -5,8 +5,6 @@ const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-one')
 const messageTwo = document.querySelector('#message-two')
 
-const port = process.env.PORT || 3000
-
 weatherform.addEventListener('submit', (e) => {
     e.preventDefault()
     const location = search.value;
@@ -15,7 +13,7 @@ weatherform.addEventListener('submit', (e) => {
     messageTwo.textContent = ''
 
     // fetch('http://localhost:3000/weather?address='+location).then((response) => {
-    fetch('https://vanave-weather-app.herokuapp.com/weather?address=' + location).then((response) => {
+    fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 messageOne.textContent = data.error
