@@ -4,17 +4,21 @@
 <head>
     <link rel="stylesheet" href="/css/styles.css">
     <title>Weather Application</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
     <center>
+        
         <form>
+            <h2>Get real time weather information</h2>
             <input type="text" placeholder="Enter Location" id="location">&nbsp;&nbsp;&nbsp;<button>Search</button>
         </form>
+
         <div id="content">
-            <p id="message-one">Pune, Maharashtra, India</p>
+            <p id="message-one"></p>
             <hr>
-            <p id="message-two">Partly cloudy. It is currently 26 degrees out. It feels like 28 degrees out.</p>
+            <p id="message-two"></p>
         </div>
     </center>
     <div id="background-wrap">

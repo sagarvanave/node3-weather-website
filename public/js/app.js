@@ -8,7 +8,7 @@ const messageTwo = document.querySelector('#message-two')
 weatherform.addEventListener('submit', (e) => {
     e.preventDefault()
     const location = search.value;
-
+    $("#content").fadeIn(100);
     messageOne.textContent = 'Loading ...'
     messageTwo.textContent = ''
 
